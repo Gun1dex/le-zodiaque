@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper:after {
+  content: '';
+  display: block;
+  padding-top: 130%;
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.bg-color {
+  background-color: #28173f;
+  color: white;
+}
+
+.card {
+  border: none;
+}
+
+img:focus {
+  outline: none;
+}
+
+.centered-title {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.5);
+  font-size: auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 5px;
+}

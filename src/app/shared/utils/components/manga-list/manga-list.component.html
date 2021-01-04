@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4" *ngFor="let manga of mangas | slice:0:maxSlice">
+      <app-manga [manga]="manga"></app-manga>
+  </div>
+</div>

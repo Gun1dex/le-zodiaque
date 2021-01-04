@@ -1,0 +1,29 @@
+.navbar-custom {
+  background-color: #28173f;
+  background: linear-gradient(#382057, #28173f);
+}
+
+@media screen and (min-width: 992px) {
+  img {
+    height: 20vh;
+    position: absolute;
+    top: 0px;
+    left: auto;
+  }
+  .page-content {
+    margin-top: 10%;
+  }
+  .navbar-custom {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  img {
+    height: 10vh;
+  }
+}
+
+img:focus {
+  outline: none;
+}

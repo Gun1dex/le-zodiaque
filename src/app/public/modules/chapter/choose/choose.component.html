@@ -1,0 +1,13 @@
+<div *ngIf="manga">
+  <div class="row mt-5">
+    <div class="offset-xl-2 col-xl-8 offset-1 col-10">
+      <app-manga-detail [manga]="manga"></app-manga-detail>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="offset-xl-2 col-xl-8 offset-1 col-10">
+      <app-chapter-list [manga]="manga"></app-chapter-list>
+    </div>
+  </div>
+</div>
