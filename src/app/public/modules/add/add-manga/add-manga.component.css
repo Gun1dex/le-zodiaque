@@ -1,0 +1,11 @@
+label, input {
+  color: white;
+}
+
+.error-message {
+  color: red;
+}
+
+textarea {
+  resize: none;
+}

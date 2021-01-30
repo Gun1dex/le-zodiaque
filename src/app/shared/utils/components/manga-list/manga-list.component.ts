@@ -11,12 +11,19 @@ import { MangaService } from 'src/app/core/services/bdd/manga.service';
 export class MangaListComponent implements OnInit {
   mangas!: Manga[];
   @Input() maxSlice: number = 9;
+  @Input() page: string = "";
 
   constructor(private mangaService: MangaService) { }
 
   ngOnInit(): void {
     this.mangaService.initMangaService().then(() => {
-      this.mangas = this.mangaService.getMangas();
+      if (this.page === "home") {
+        this.mangas = this.mangaService.getLastModifiedMangas(this.maxSlice);
+      } else if(this.page === "projets") {
+        this.mangas = this.mangaService.getAlphabeticalOrderMangas(this.maxSlice);
+      } else {
+        this.mangas = this.mangaService.getMangas();
+      }
     });
   }
 

@@ -1,0 +1,80 @@
+<div class="row mt-5 tt" *ngIf="showForm">
+  <div class="offset-xl-2 col-xl-8 offset-1 col-8">
+    <form [formGroup]="addMangaForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label>Insérer une image</label>
+        <br><br>
+        <input type="file" (change)="changeImages($event)" accept=".png, .jpeg, .jpg">
+        <div class="error-message" *ngIf="!imagesValid"> Une image doit être insérée ! </div>
+      </div>
+
+      <div class="form-group">
+        <label>Titre du projet</label>
+        <input type="text" class="form-control" placeholder="Titre du projet" formControlName="name">
+        <div class="error-message" *ngIf="!nameValid">Le titre du projet est obligatoire !</div>
+      </div>
+
+      <div class="form-group">
+        <label>Sigle</label>
+        <input type="text" class="form-control" placeholder="Sigle" formControlName="acronym">
+        <div class="error-message" *ngIf="!nameValid">Le sigle du projet est obligatoire !</div>
+      </div>
+
+      <div class="form-group">
+        <label>Noms alternatifs</label>
+        <input type="text" class="form-control" placeholder="Noms alternatifs" formControlName="otherNames">
+        <div class="error-message" *ngIf="!nameValid">Les noms alternatifs sont obligatoires !</div>
+      </div>
+
+      <div class="form-group">
+        <label>Auteur</label>
+        <input type="text" class="form-control" placeholder="Auteur" formControlName="author">
+        <div class="error-message" *ngIf="!nameValid">L'auteur est obligatoire !</div>
+      </div>
+
+      <div class="form-group">
+        <label>Artiste</label>
+        <input type="text" class="form-control" placeholder="Artiste" formControlName="artist">
+        <div class="error-message" *ngIf="!nameValid">L'artiste est obligatoire !</div>
+      </div>
+
+      <div class="form-group">
+        <label>Choisir les genres (appuyer sur ctrl ou shift pour selectionner plus d'un):</label>
+        <select multiple class="form-control" formControlName="genders" size="4">
+          <option *ngFor="let gender of genders" [value]="gender"> {{ gender }} </option>
+        </select>
+        <div class="error-message" *ngIf="!gendersValid"> Aucun genre n'est selectionné ! </div>
+      </div>
+
+      <select class="selectpicker" multiple>
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Barbecue</option>
+      </select>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Contenu choquant</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Licencié</label>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" class="form-control" placeholder="Nom" formControlName="description" cols="40"
+          rows="5"></textarea>
+        <div class="error-message" *ngIf="!nameValid"> Vous devez mettre une description au manga ! </div>
+      </div>
+
+      <div class="text-right">
+        <button [routerLink]="['/']" class="btn btn-primary mr-3"> Retour </button>
+        <button type="submit" class="btn btn-primary"> Créer la fiche </button>
+      </div>
+
+    </form>
+  </div>
+</div>

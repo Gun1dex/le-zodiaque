@@ -8,4 +8,5 @@ export interface Manga {
   acronym: string;
   lastModification: string;
   lastChapterName: string;
+  visible: boolean
 }

@@ -1,0 +1,14 @@
+<div class="row mt-5">
+  <div class="offset-xl-2 col-xl-8 offset-1 col-10">
+    <form [formGroup]="addChapterForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label>Nom du chapitre</label>
+        <input type="text" class="form-control" placeholder="Nom" formControlName="name">
+        <div class="error-message" *ngIf="!nameValid"> Le nom du chapitre est obligatoire !</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Ajouter le chapitre</button>
+    </form>
+  </div>
+</div>

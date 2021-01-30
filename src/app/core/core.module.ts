@@ -4,6 +4,9 @@ import { SharedModule } from '../shared/shared.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -14,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     SharedModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   exports: [
     NavbarComponent,
