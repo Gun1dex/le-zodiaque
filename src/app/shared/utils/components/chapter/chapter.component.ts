@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Chapter } from 'src/app/core/models/chapter';
-import { Manga } from 'src/app/core/models/manga';
+import { IProject } from 'src/app/core/models/project';
 
 @Component({
   selector: 'app-chapter',
@@ -9,7 +9,7 @@ import { Manga } from 'src/app/core/models/manga';
 })
 export class ChapterComponent implements OnInit {
   @Input() chapter!: Chapter;
-  @Input() manga!: Manga;
+  @Input() project!: IProject;
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 export interface Chapter {
   key: string;
-  mangaId: string;
+  projectId: string;
   title: string;
   images: string[];
 }

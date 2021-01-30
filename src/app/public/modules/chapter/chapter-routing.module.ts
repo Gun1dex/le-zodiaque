@@ -4,8 +4,8 @@ import { ChooseComponent } from './choose/choose.component';
 import { ReadComponent } from './read/read.component';
 
 const routes: Routes = [
-  { path: ':manga', component: ChooseComponent },
-  { path: ':manga/:chapter', component: ReadComponent },
+  { path: ':project', component: ChooseComponent },
+  { path: ':project/:chapter', component: ReadComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 

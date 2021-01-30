@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MangaListComponent } from './manga-list.component';
+import { AddProjectComponent } from './add-project.component';
 
-describe('MangaListComponent', () => {
-  let component: MangaListComponent;
-  let fixture: ComponentFixture<MangaListComponent>;
+describe('AddProjectComponent', () => {
+  let component: AddProjectComponent;
+  let fixture: ComponentFixture<AddProjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MangaListComponent ]
+      declarations: [ AddProjectComponent ],
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MangaListComponent);
+    fixture = TestBed.createComponent(AddProjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

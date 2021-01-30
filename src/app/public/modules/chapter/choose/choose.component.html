@@ -1,14 +1,14 @@
-<div *ngIf="manga">
+<div *ngIf="project">
   <div class="row mt-5">
     <div class="offset-xl-2 col-xl-8 offset-1 col-10">
-      <app-manga-detail [manga]="manga"></app-manga-detail>
+      <app-project-detail [project]="project"></app-project-detail>
     </div>
   </div>
 
   <div class="row mt-5">
     <div class="offset-xl-2 col-xl-8 offset-1 col-10">
       <a [routerLink]="['/ajouter/chapitre']">Ajouter</a>
-      <app-chapter-list [manga]="manga"></app-chapter-list>
+      <app-chapter-list [project]="project"></app-chapter-list>
     </div>
   </div>
 </div>

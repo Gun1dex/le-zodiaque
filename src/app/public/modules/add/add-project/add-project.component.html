@@ -1,6 +1,6 @@
 <div class="row mt-5 tt" *ngIf="showForm">
   <div class="offset-xl-2 col-xl-8 offset-1 col-8">
-    <form [formGroup]="addMangaForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="addProjectForm" (ngSubmit)="onSubmit()">
 
       <div class="form-group">
         <label>Insérer une image</label>
@@ -17,7 +17,7 @@
 
       <div class="form-group">
         <label>Sigle</label>
-        <input type="text" class="form-control" placeholder="Sigle" formControlName="acronym">
+        <input type="text" class="form-control" placeholder="Sigle" formControlName="sigle">
         <div class="error-message" *ngIf="!nameValid">Le sigle du projet est obligatoire !</div>
       </div>
 
@@ -47,19 +47,19 @@
         <div class="error-message" *ngIf="!gendersValid"> Aucun genre n'est selectionné ! </div>
       </div>
 
-      <select class="selectpicker" multiple>
+      <!-- <select class="selectpicker" multiple>
         <option>Mustard</option>
         <option>Ketchup</option>
         <option>Barbecue</option>
-      </select>
+      </select> -->
 
       <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" formControlName="shocking">
         <label class="custom-control-label" for="customSwitch1">Contenu choquant</label>
       </div>
 
       <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" formControlName="licence">
         <label class="custom-control-label" for="customSwitch1">Licencié</label>
       </div>
 
@@ -67,7 +67,7 @@
         <label>Description</label>
         <textarea type="text" class="form-control" placeholder="Nom" formControlName="description" cols="40"
           rows="5"></textarea>
-        <div class="error-message" *ngIf="!nameValid"> Vous devez mettre une description au manga ! </div>
+        <div class="error-message" *ngIf="!nameValid"> Vous devez mettre une description au projet ! </div>
       </div>
 
       <div class="text-right">

@@ -1,0 +1,9 @@
+<div class="card h-100 bg-color">
+  <div class="wrapper">
+    <img class="card-img-top img-fluid pointer" [routerLink]="['/projet', project.name]" [src]="project.image" alt="">
+    <div class="centered-title">{{ project.lastChapterName }}</div>
+  </div>
+  <div class="card-body">
+    <p class="text-center">{{ project.sigle }}</p>
+  </div>
+</div>

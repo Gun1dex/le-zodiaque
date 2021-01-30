@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddChapterComponent } from './add-chapter/add-chapter.component';
-import { AddMangaComponent } from './add-manga/add-manga.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 const routes: Routes = [
   { path: 'chapitre', component: AddChapterComponent },
-  { path: 'manga', component: AddMangaComponent },
+  { path: 'project', component: AddProjectComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 

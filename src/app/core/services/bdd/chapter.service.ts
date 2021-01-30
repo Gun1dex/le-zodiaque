@@ -36,7 +36,7 @@ export class ChapterService {
     return this.chapters;
   }
 
-  getChaptersOfManga(idManga: string): Chapter[] {
-    return this.chapters.filter(m => m.mangaId === idManga);
+  getChaptersOfProject(projectId: string): Chapter[] {
+    return this.chapters.filter(m => m.projectId === projectId);
   }
 }

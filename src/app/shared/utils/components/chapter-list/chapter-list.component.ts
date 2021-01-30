@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Chapter } from 'src/app/core/models/chapter';
-import { Manga } from 'src/app/core/models/manga';
+import { IProject } from 'src/app/core/models/project';
 import { ChapterService } from 'src/app/core/services/bdd/chapter.service';
 
 @Component({
@@ -10,13 +10,13 @@ import { ChapterService } from 'src/app/core/services/bdd/chapter.service';
 })
 export class ChapterListComponent implements OnInit {
   chapters!: Chapter[];
-  @Input() manga!: Manga;
+  @Input() project!: IProject;
 
   constructor(private chapterService: ChapterService) { }
 
   ngOnInit(): void {
     this.chapterService.initChapterService().then(() => {
-      this.chapters = this.chapterService.getChaptersOfManga(this.manga.key);
+      this.chapters = this.chapterService.getChaptersOfProject(this.project.key);
     });
   }
 }

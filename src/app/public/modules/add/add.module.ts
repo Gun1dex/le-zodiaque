@@ -1,14 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AddRoutingModule } from './add-routing.module';
-import { AddChapterComponent } from './add-chapter/add-chapter.component';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AddMangaComponent } from './add-manga/add-manga.component';
-
+import { AddChapterComponent } from './add-chapter/add-chapter.component';
+import { AddProjectComponent } from './add-project/add-project.component';
+import { AddRoutingModule } from './add-routing.module';
 
 @NgModule({
-  declarations: [AddChapterComponent, AddMangaComponent],
+  declarations: [AddChapterComponent, AddProjectComponent],
   imports: [
     CommonModule,
     AddRoutingModule,
